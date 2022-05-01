@@ -1,0 +1,53 @@
+    const togglePassword1 = document.querySelector("#togglePassword1");
+    const togglePassword2 = document.querySelector('#togglePassword2');
+    const password = document.querySelector("#password");
+    const confirmpassword = document.querySelector("#confirmpassword");
+
+    togglePassword1.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
+    togglePassword2.addEventListener("click", function () {
+        // toggle the type at    const togglePassword1 = document.querySelector("#togglePassword1");
+    const togglePassword2 = document.querySelector('#togglePassword2');
+    const password = document.querySelector("#password");
+    const confirmpassword = document.querySelector("#confirmpassword");
+
+    togglePassword1.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
+    togglePassword2.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = confirmpassword.getAttribute("type") === "confirmpassword" ? "text" : "confirmpassword";
+        confirmpassword.setAttribute("type", type);
+
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
+
+    // prevent form submit
+    const form = document.querySelector("form");
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+    });tribute
+        const type = confirmpassword.getAttribute("type") === "confirmpassword" ? "text" : "confirmpassword";
+        confirmpassword.setAttribute("type", type);
+
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
+
+    // prevent form submit
+    const form = document.querySelector("form");
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+    });
