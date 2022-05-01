@@ -1,0 +1,43 @@
+<h1>addOredit</h1>
+
+<form action="/customer/signup" method="post" autocomplete="on">
+    <input type="hidden" name="_id" id="_id" value="{{employee._id}}">
+
+    <label for="firstname">First name: </label>
+    <input type="text" name="firstname" id="firstname" placeholder="enter first name" required>
+
+    <label for="lastname">Last name:</label>
+    <input type="text" name="lastname" id="lastname" placeholder="enter last name" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="enter Email" required>
+
+    <label for="phoneNumber">Phone Number</label>
+    <input type="number" name="phoneNumber" id="phoneNumber" placeholder="enter phone Number">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="enter Password" required>
+    {{!-- <i class="bi bi-eye-slash" id="togglePassword1"></i> --}}
+
+    <label for="confirmpassword">Confirm Password</label>
+    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="enter password again" >
+    {{!-- <i class="bi bi-eye-slash" id="togglePassword2"></i> --}}
+
+    <input type="submit" onclick="checkpass()">
+    <input type="reset" value="reset">
+</form>
+<script>
+
+function checkpass(){
+
+    var pwd1 = document.getElementById("password");
+    var pwd2 = document.getElementById("confirmpassword");
+    
+    console.log(pwd1.value);
+    console.log(pwd2.value);
+    if(pwd1.value!=pwd2.value){
+        console.log("password did not match");
+        
+    } 
+}
+</script>
