@@ -1,7 +1,8 @@
 const express = require('express'); 
 var router = express.Router();
 const mongoose = require('mongoose');
-const Customer = mongoose.model('Customer')
+const Customer = mongoose.model('Customer');
+
 
 
 
@@ -23,26 +24,28 @@ router.get('/login',(req,res)=>{
 
 function insertRecord(req,res){
     var customer = new Customer();
-    customer.firstname = req.body.firstname;
-    customer.lastname = req.body.lastname;
+    customer.name = req.body.name;
     customer.email = req.body.email;
     customer.phoneNumber = req.body.phoneNumber;
     customer.password = req.body.password;
-    customer.save((err,doc)=>{
-        if(!err)
-        //    res.send('thanks');
-        console.log('sss');
-        else {
-            if(err.name == 'ValidationError'){
-               handleValidationError(err,req.body);
-               res.render('customer/addOrEdit',{customer:req.body});
-            }
-            else{
-                console.log('Error during record inserton :' + err);
-            }
+    // console.log(customer);
+     customer.save((err,doc)=>{
+         if(!err){
+            res.render("customer/login");
+         }
+            
+        //  console.log('sss');
+         else {
+             if(err.name == 'ValidationError'){
+                handleValidationError(err,req.body);
+                res.render('customer/addOrEdit',{customer:req.body});
+             }
+             else{
+                 console.log('Error during record inserton :' + err);
+             }
 
-        }
-    });
+         }
+     });
 }
 
 module.exports = router;
