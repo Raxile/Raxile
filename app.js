@@ -17,8 +17,9 @@ app.use(bodyparser.urlencoded({
 app.use(bodyparser.json());
 
 app.set('views', path.join(__dirname,'/views/'));
-app.engine('hbs',exphbs.engine({ extname: 'hbs',defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layout/'}));
+app.engine('hbs',exphbs.engine({ extname: '.hbs',defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layout/'}));
 app.set('view engine','hbs');
+app.use(express.static(__dirname + '/css'));
 
 
 app.listen(port, () => { 
@@ -28,4 +29,3 @@ app.listen(port, () => {
 app.use('/',homeControler);
 
 app.use('/customer', customerController);
-
