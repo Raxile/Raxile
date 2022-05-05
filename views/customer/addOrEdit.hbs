@@ -1,30 +1,42 @@
-<h1>addOredit</h1>
 
 <form action="/customer/signup" method="post" autocomplete="on">
     <input type="hidden" name="_id" id="_id" value="{{employee._id}}">
-
-    <label for="firstname">First name: </label>
-    <input type="text" name="firstname" id="firstname" placeholder="enter first name" required>
-
-    <label for="lastname">Last name:</label>
-    <input type="text" name="lastname" id="lastname" placeholder="enter last name" required>
-
+      <div>
+          <h1>signup</h1>
+      </div>
+      
+     <div class="form-group"> 
+    <label for="name"> name: </label>
+    <input type="text" name="name" id="name" placeholder="enter name" required>
+    </div>
+              
+     <div class="form-group" >
     <label for="email">Email</label>
     <input type="email" name="email" id="email" placeholder="enter Email" required>
+     </div>
 
+     <div class="form-group" >
     <label for="phoneNumber">Phone Number</label>
-    <input type="number" name="phoneNumber" id="phoneNumber" placeholder="enter phone Number">
+    <input type="number" name="phoneNumber" id="phoneNumber" placeholder="enter phone" required>
+     </div>    
 
+     <div class="form-group" >
     <label for="password">Password</label>
     <input type="password" name="password" id="password" placeholder="enter Password" required>
+     </div>
+
     {{!-- <i class="bi bi-eye-slash" id="togglePassword1"></i> --}}
-
+     
+     <div class="form-group">
     <label for="confirmpassword">Confirm Password</label>
-    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="enter password again" >
-    {{!-- <i class="bi bi-eye-slash" id="togglePassword2"></i> --}}
+    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="enter password again" required>
+     </div>
 
-    <input type="submit" onclick="checkpass()">
-    <input type="reset" value="reset">
+    {{!-- <i class="bi bi-eye-slash" id="togglePassword2"></i> --}}
+    
+    <div>
+        <input type="submit" onclick="checkpass()">
+    </div>
 </form>
 <script>
 
